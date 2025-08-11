@@ -1,6 +1,8 @@
-# LiveCodeBench
+# AutoCodeBench
 
-This is the repository that contains source code for the [LiveCodeBench website](https://livecodebench.github.io/).
+This is the repository that contains source code for the [AutoCodeBench website](https://AutoCodeBench.github.io/).
+
+The code refers to [Livecode Bench website](https://livecodebench.github.io).
 
 # Website License
 
