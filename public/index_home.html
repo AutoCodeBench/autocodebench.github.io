@@ -42,9 +42,56 @@
   <script src="./js/bulma-carousel.min.js"></script>
   <script src="./js/bulma-slider.min.js"></script>
   <script src="./js/index.js"></script>
+  
+  <!-- Navbar Toggle Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Add a click event on each of them
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+          // Get the target from the "data-target" attribute
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    });
+  </script>
 </head>
 
 <body>
+
+  <!-- Navigation Menu -->
+  <div style="position: absolute; top: 1rem; right: 2rem; z-index: 100;">
+    <div class="dropdown is-hoverable is-right">
+      <div class="dropdown-trigger">
+        <button class="button is-primary is-outlined is-small" aria-haspopup="true" aria-controls="dropdown-menu">
+          <span>More Projects</span>
+          <span class="icon is-small">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </div>
+      <div class="dropdown-menu" id="dropdown-menu" role="menu">
+        <div class="dropdown-content">
+          <a href="https://artifactsbenchmark.github.io/" target="_blank" class="dropdown-item">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="fas fa-external-link-alt"></i>
+              </span>
+              <span>ArtifactsBench</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <section class="hero">
     <div class="hero-body">
@@ -182,6 +229,23 @@
       <div class="columns is-centered">
         <div class="column is-8">
           <h2 class="title is-3 has-text-centered mb-4">📰 News</h2>
+          
+          <div class="news-item mb-3">
+            <div class="level is-mobile">
+              <div class="level-left">
+                <span class="icon-text">
+                  <span class="icon has-text-success">
+                    <i class="fas fa-database"></i>
+                  </span>
+                </span>
+                <span class="ml-3">
+                  <div>2025.12.01 - We released <strong>AutoCodeBench-v2</strong> benchmark, built on the original dataset and iteratively </div>
+                  <div>refined through top proprietary models and a sandbox to produce 1,000 higher-quality problems.</div>
+                </span>
+              </div>
+            </div>
+          </div>
+
           
           <div class="news-item mb-3">
             <div class="level is-mobile">
